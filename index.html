@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://softreck.com/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://softreck.com/img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Demo WebStream dev</title>
+
+
+
+    <script src="//get.jloads.com/jloads.min.js">
+        // Jloads is loading any media and content dynamically
+    </script>
+
+    <script>
+        // load content ASAP with dependencies, that jquery must be first and after that bootstrap
+        jl.file({
+            "//code.jquery.com/jquery-3.5.1.min.js": [
+                "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+                "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            ]
+        });
+    </script>
+
+    <script>
+        // Load core of application
+        jl.target({
+            "head": [
+                "https://www.faas.ovh/css/fade-in.css",
+                "https://www.faas.ovh/form/form.js",
+                "https://www.faas.ovh/form/form.css",
+                "https://www.faas.ovh/form/inputs.css",
+            ],
+            "#forms": {
+                "https://www.faas.ovh/form/app.html": [
+                    "https://www.faas.ovh/form/submit.js",
+                    "https://www.faas.ovh/form/edit_list.js",
+                ]
+            },
+            "#messages": [
+                "https://www.faas.ovh/js/messages.js"
+            ],
+            "#images": [
+                "https://logo.faas.ovh/4/cover.png",
+            ],
+            "#menu": [
+                "https://www.faas.ovh/html/menu.html",
+            ],
+            "#usermenu": [
+                "https://www.faas.ovh/html/user_menu.html",
+            ],
+            "footer": [
+                "https://www.faas.ovh/html/footer.html"
+            ]
+        });
+    </script>
+
+    <script>
+        // Load dynamically contents depends url #hash
+        jl.url({
+            "#app-create": {
+                "#forms": {
+                    "https://www.faas.ovh/form/plesk.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#app-list": {
+                "#forms": {
+                    "https://www.faas.ovh/form/plesk.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#env-list": {
+                "#forms": {
+                    "https://www.faas.ovh/form/plesk.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#domain-list": {
+                "#forms": {
+                    "https://www.faas.ovh/form/plesk.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#plesk": {
+                "#forms": {
+                    "https://www.faas.ovh/form/plesk.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#app": {
+                "#forms": {
+                    "https://www.faas.ovh/form/app.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#app_man": {
+                "#forms": {
+                    "https://www.faas.ovh/form/app_man.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#server": {
+                "#forms": {
+                    "https://www.faas.ovh/form/server.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#webservice": {
+                "#forms": {
+                    "https://www.faas.ovh/form/webservice.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#cloud": {
+                "#forms": {
+                    "https://www.faas.ovh/form/cloud.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#local": {
+                "#forms": {
+                    "https://www.faas.ovh/form/local.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#iot": {
+                "#forms": {
+                    "https://www.faas.ovh/form/iot.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#api": {
+                "#forms": {
+                    "https://www.faas.ovh/form/api.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#api_func": {
+                "#forms": {
+                    "https://www.faas.ovh/form/api_func.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#api_storage": {
+                "#forms": {
+                    "https://www.faas.ovh/form/api_storage.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            },
+            "#test": {
+                "#forms": {
+                    "https://www.faas.ovh/form/test.html": [
+                        "https://www.faas.ovh/form/submit.js",
+                        "https://www.faas.ovh/form/edit_list.js"
+                    ]
+                }
+            }
+        });
+    </script>
+
+
+</head>
+<body>
+
+<div class="container fade-in" id="jloads">
+    <!-- Content here -->
+    <div class="jloads content">
+
+        <nav>
+            <a id="images" href="/"></a>
+            <div id="usermenu"></div>
+        </nav>
+
+        <div id="menu"></div>
+
+        <div id="forms"></div>
+
+        <div id="apps"></div>
+
+        <div id="messages" class="messages">
+        </div>
+    </div>
+
+    <footer></footer>
+</div>
+
+</body>
+</html>
